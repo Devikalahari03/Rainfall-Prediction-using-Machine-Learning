@@ -1,185 +1,396 @@
-<div align="center">
+# 🌧️ Rainfall Prediction using Machine Learning
 
-# 🌧️ Rainfall Prediction using Machine Learning 🚀
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Flask-Web%20App-black?style=for-the-badge&logo=flask&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Accuracy-83.86%25-brightgreen?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge"/>
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-orange.svg)](https://pandas.pydata.org/)
-[![XGBoost](https://img.shields.io/badge/XGBoost-1.7%2B-lightblue.svg)](https://xgboost.readthedocs.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <b>A full-stack Machine Learning web application that predicts whether tomorrow will be a Rainy Day ☔ or Sunny Day ☀️</b>
+</p>
 
-
-![Demo GIF](screenshots/demo.gif)
-### Predicting Rain Today, Planning Better Tomorrow ☁️📊
-
-</div>
-
-## 🚀 Project Overview
-
-This project focuses on predicting rainfall using historical weather data and machine learning models.
-It demonstrates a complete ML pipeline — from **data preprocessing** to **model building** and **prediction system deployment**.
-
----
-
-## 🎯 Key Features
-
-* 📊 Data preprocessing and feature selection
-* 🤖 Multiple machine learning models implemented
-* 📈 Model comparison and evaluation
-* 🌐 Simple prediction system (using trained model)
-* 📉 Data visualization for better insights
+<p align="center">
+  <img src="https://img.shields.io/badge/M.Sc.-Computer%20Science-purple?style=flat-square"/>
+  <img src="https://img.shields.io/badge/University-Adikavi%20Nannaya%20University-red?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Year-2023--2025-blue?style=flat-square"/>
+</p>
 
 ---
 
-# 🔍 What I did:
+## 📌 Table of Contents
 
-• Built and compared ML models including Random Forest, KNN, and Gaussian Naive Bayes
-
-• Achieved 83.8% accuracy, improving prediction reliability
-
-• Performed data cleaning, preprocessing, and exploratory data analysis on multi-year datasets
-
-• Applied feature engineering to enhance model performance
-
-
-# 💡 Going beyond modeling:
-
-• Designed system architecture using UML diagrams (Use Case, Class, Sequence, Activity) for structured development and knowledge sharing
-
-• Developed a Flask-based web interface to generate real-time rainfall predictions
-
-• Created detailed research documentation for academic and reporting purposes
+- [About the Project](#-about-the-project)
+- [Demo](#-demo)
+- [Features](#-features)
+- [Dataset](#-dataset)
+- [ML Algorithms Used](#-ml-algorithms-used)
+- [Model Comparison](#-model-comparison)
+- [System Architecture](#-system-architecture)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Installation & Setup](#-installation--setup)
+- [How to Use](#-how-to-use)
+- [Results](#-results)
+- [Future Work](#-future-work)
+- [Author](#-author)
+- [Acknowledgements](#-acknowledgements)
 
 ---
 
-## 📂 Project Structure
+## 🌟 About the Project
 
-```bash
-Rainfall-Prediction/
-│
-├── Data Preprocessing.ipynb
-├── dt.pkl
-├── GaussianNB Model.ipynb
-├── Feature Selection.ipynb
-├── Logistic Regression Model.ipynb
-├── LogisticRegression.pkl
-├── Decision Tree model.ipynb
-├── Random Forest model.ipynb
-├── SVC Model.ipynb
-├── svc.pkl
-├── KNeighbors Classifier Model.ipynb
-├── GaussianNB Model.ipynb
-├── gnb.pkl
-├── Xgboost model.ipynb
-├── xg_random
-├── Catboost model.ipynb
-├── cat.pkl
-│
-├── app.py                     # Prediction system
-├── requirements.txt          # Dependencies
-├── weatherAUS.csv            # Dataset (optional)
-│
-├── templates/                # HTML files (if UI exists)
-├── static/                   # CSS/JS files
-│
-└── README.md
+Rainfall prediction is one of the most challenging problems in meteorology, with huge real-world impact on:
+
+- 🌾 **Agriculture** — Crop planning and irrigation management
+- 💧 **Water Resource Management** — Reservoir and dam operations
+- 🌊 **Flood Control** — Early warning systems
+- 🚨 **Disaster Management** — Evacuation planning
+- 🏙️ **Urban Planning** — Drainage and infrastructure
+
+This project builds a **supervised machine learning model** trained on historical weather data to predict whether it will rain the next day. It includes a **Flask web application** with an interactive predictor interface, deployed locally using Python.
+
+
+---
+
+## 🎬 Demo
+
+| Home Page | Prediction Form | Rainy Day Output | Sunny Day Output |
+|:---------:|:---------------:|:----------------:|:----------------:|
+| ![Home](# <img width="1898" height="857" alt="Screenshot 2025-06-19 231944" src="https://github.com/user-attachments/assets/3b0a2b17-ae33-44bc-b05c-a329d52f1b5e" />) | ![Form](# <img width="1310" height="586" alt="Screenshot 2025-06-19 134449" src="https://github.com/user-attachments/assets/886e789d-d48f-446a-8eaa-3329608abd5e" />) | ![Rainy](# <img width="1395" height="841" alt="Screenshot 2026-05-01 210040" src="https://github.com/user-attachments/assets/c2b74293-409e-4489-8a40-3228679277d1" />) | ![Sunny](# <img width="1426" height="850" alt="Screenshot 2026-05-01 205856" src="https://github.com/user-attachments/assets/c4eec612-fdcc-40ee-948e-218291666dfc" />) |
+
+---
+
+## ✨ Features
+
+- ✅ Predicts next-day rainfall as **Rainy** or **Sunny**
+- ✅ Interactive web form to input 23 weather parameters
+- ✅ Compares **3 ML algorithms** (Random Forest, KNN, Gaussian Naïve Bayes)
+- ✅ **Random Forest** selected as best model with **83.86% accuracy**
+- ✅ Trained on a large dataset of **9,15,355 weather records**
+- ✅ Full ML pipeline: Data Preprocessing → Feature Selection → Training → Evaluation → Deployment
+- ✅ Clean, responsive UI built with Bootstrap 5
+
+---
+
+## 📊 Dataset
+
+| Property | Details |
+|----------|---------|
+| **Source** | [Kaggle – Rain in Australia](https://www.kaggle.com/) |
+| **Records** | 9,15,355 rows |
+| **Features** | 23 columns |
+| **Target Variable** | `RainTomorrow` (0 = Sunny, 1 = Rainy) |
+| **Train Split** | 80% |
+| **Test Split** | 20% |
+
+### 📋 Dataset Attributes
+
+| # | Feature | Type |
+|---|---------|------|
+| 1 | Date | Nominal |
+| 2 | Location | Nominal |
+| 3 | MinTemp | Continuous |
+| 4 | MaxTemp | Continuous |
+| 5 | Rainfall | Continuous |
+| 6 | Evaporation | Continuous |
+| 7 | Sunshine | Continuous |
+| 8 | WindGustDir | Nominal |
+| 9 | WindGustSpeed | Continuous |
+| 10 | WindDir9am | Nominal |
+| 11 | WindDir3pm | Nominal |
+| 12 | WindSpeed9am | Continuous |
+| 13 | WindSpeed3pm | Continuous |
+| 14 | Humidity9am | Continuous |
+| 15 | Humidity3pm | Continuous |
+| 16 | Pressure9am | Continuous |
+| 17 | Pressure3pm | Continuous |
+| 18 | Cloud9am | Continuous |
+| 19 | Cloud3pm | Continuous |
+| 20 | Temp9am | Continuous |
+| 21 | Temp3pm | Continuous |
+| 22 | RainToday | Nominal |
+| 23 | **RainTomorrow** | **Target** |
+
+---
+
+## 🤖 ML Algorithms Used
+
+### 1. 🌲 Random Forest
+An ensemble learning method that builds multiple decision trees on random subsets of the data and takes a majority vote for prediction.
+
+**Why Random Forest?**
+- Handles large datasets efficiently
+- Resistant to overfitting (averages multiple trees)
+- Works for both classification and regression
+- High accuracy on tabular weather data
+
+**How it works:**
+```
+1. Select random samples from the dataset
+2. Build a decision tree for each sample
+3. Collect predictions from all trees
+4. Take majority vote → Final prediction
 ```
 
 ---
 
+### 2. 📐 K-Nearest Neighbor (KNN)
+Classifies a new data point based on the majority class of its K nearest neighbors using Euclidean distance.
 
-## 📊 Dataset
-- **Source**: https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
-- **Features**: 15 columns including Location, MinTemp, MaxTemp, RainfallAmount, Evaporation, Sunshine, WindGustSpeed, Humidity, Pressure, Cloud, WindDir, RainToday.
-- **Size**: 50k+ samples, preprocessed for missing values (imputation) and outliers.
-- **Target**: Continuous rainfall (mm)—regression problem.
+```
+d(x, y) = √ Σ(xᵢ - yᵢ)²
+```
 
-## 🛠️ Tech Stack
-| Category     | Tools                          |
-|--------------|--------------------------------|
-| Language    | Python 3.8+                   |
-| ML Framework| Scikit-learn, XGBoost         |
-| Data        | Pandas, NumPy, Matplotlib     |
-| Viz         | Seaborn, Plotly               |
-| Environment | Jupyter Notebook, Conda       |
-
-## 💻 Environment Setup
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Devikalahari03/Rainfall-Prediction-using-Machine-Learning.git
-   cd Rainfall-Prediction-using-Machine-Learning
-   ```
-2. Create virtual env:
-   ```bash
-   conda create -n rainfall python=3.8
-   conda activate rainfall
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-## ▶️ How to Run the Project
-
-### 📌 Run Notebooks
-
-1. Open project in **VS Code**
-2. Install Python & Jupyter extensions
-3. Run notebooks step-by-step:
-
-   * Data Preprocessing
-   * Feature Selection
-   * Model Building
+**Advantages:** Simple to implement, robust to noisy data, effective on large datasets.
 
 ---
 
-### 🌐 Run Web App (if app.py exists)
+### 3. 📊 Gaussian Naïve Bayes (GNB)
+A probabilistic classifier based on Bayes' theorem that assumes features follow a Gaussian (Normal) distribution.
 
+```
+P(C|X) = [P(X|C) × P(C)] / P(X)
+```
+
+**Advantages:** Fast, works well with multi-class problems, ideal for continuous data.
+
+---
+
+## 📈 Model Comparison
+
+| Model | Accuracy |
+|-------|----------|
+| 🥇 **Random Forest** | **83.86%** |
+| 🥈 K-Nearest Neighbor (KNN) | 74.78% |
+| 🥉 Gaussian Naïve Bayes | 74.48% |
+
+```
+Accuracy (%)
+│
+85 ┤  ████████████
+83 ┤  ████████████   
+75 ┤  ████████████  ██████████  ██████████
+70 ┤  ████████████  ██████████  ██████████
+   └─────────────────────────────────────
+      Random Forest    KNN         GNB
+```
+
+> ✅ **Random Forest** was selected as the final deployed model due to its superior accuracy.
+
+---
+
+## 🏗️ System Architecture
+
+```
+Real Dataset (Kaggle)
+        │
+        ▼
+  Data Pre-processing
+  (Handle nulls, encode, scale)
+        │
+        ▼
+  Feature Selection
+        │
+        ├──────────────────┐
+        ▼                  ▼
+  Training Set (80%)  Testing Set (20%)
+        │                  │
+        └──────────┬───────┘
+                   ▼
+        Model Training & Evaluation
+        (RF / KNN / GNB)
+                   │
+                   ▼
+          Rainfall Prediction
+          (Rainy ☔ / Sunny ☀️)
+```
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|----------|-----------|
+| **Language** | Python 3.x |
+| **Web Framework** | Flask |
+| **ML Library** | Scikit-learn |
+| **Data Processing** | Pandas, NumPy |
+| **Visualization** | Matplotlib, Seaborn |
+| **Frontend** | HTML5, CSS3, Bootstrap 5 |
+| **IDE** | Jupyter Notebook / PyCharm |
+| **Environment** | Anaconda Navigator |
+| **Model Format** | Pickle (.pkl) |
+
+---
+
+## 📁 Project Structure
+
+```
+Rainfall-Prediction-using-Machine-Learning/
+│
+├── app.py                      # Flask main application
+├── xg_random.pkl               # Trained Random Forest model (pickle)
+│
+├── template/
+│   ├── index.html              # Home page
+│   ├── Predictor.html          # Prediction form page
+│   ├── after_rainy.html        # Rainy day result page
+│   └── after_sunny.html        # Sunny day result page
+│
+├── static/
+│   ├── style1.css              # Home page styles
+│   └── Predictor.css           # Predictor form styles
+│
+├── dataset/
+│   └── rainfall_data.csv       # Kaggle weather dataset
+│
+├── notebooks/
+│   └── Rainfall_Prediction.ipynb  # Model training notebook
+│
+├── screenshots/                # App screenshots (add your own)
+│
+├── requirements.txt            # Python dependencies
+└── README.md                   # This file
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+- Python 3.x
+- pip / Anaconda
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/Devikalahari03/Rainfall-Prediction-using-Machine-Learning.git
+cd Rainfall-Prediction-using-Machine-Learning
+```
+
+### Step 2: Create Virtual Environment (Recommended)
+```bash
+python -m venv venv
+source venv/bin/activate        # On Linux/Mac
+venv\Scripts\activate           # On Windows
+```
+
+### Step 3: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
+```bash
+pip install flask flask-cors pandas numpy scikit-learn matplotlib seaborn xgboost pickle5
+```
+
+### Step 4: Run the Application
 ```bash
 python app.py
 ```
 
-Then open in browser:
-
+### Step 5: Open in Browser
 ```
 http://127.0.0.1:5000/
 ```
 
 ---
 
+## 🖥️ How to Use
 
-## 📈 Results
-
-* Compared multiple ML models for rainfall prediction
-* Identified best-performing model based on accuracy
-* Generated insights from weather features
-
-# Output screens
-
-# <img width="1898" height="857" alt="Screenshot 2025-06-19 231944" src="https://github.com/user-attachments/assets/3b0a2b17-ae33-44bc-b05c-a329d52f1b5e" />
-# <img width="1310" height="586" alt="Screenshot 2025-06-19 134449" src="https://github.com/user-attachments/assets/886e789d-d48f-446a-8eaa-3329608abd5e" />
-# <img width="1303" height="562" alt="Screenshot 2025-06-19 134948" src="https://github.com/user-attachments/assets/d46c6f7f-be0f-478e-b506-635102b76ca8" />
-# <img width="1395" height="841" alt="Screenshot 2026-05-01 210040" src="https://github.com/user-attachments/assets/c2b74293-409e-4489-8a40-3228679277d1" />
-# <img width="1426" height="850" alt="Screenshot 2026-05-01 205856" src="https://github.com/user-attachments/assets/c4eec612-fdcc-40ee-948e-218291666dfc" />
-
----
-
-## 💡 Key Learnings
-
-* Importance of data cleaning and preprocessing
-* Feature selection improves model performance
-* Model comparison helps choose best algorithm
-* End-to-end ML workflow implementation
+1. Open the app in your browser at `http://127.0.0.1:5000/`
+2. Click on **"Predictor"** in the navigation bar
+3. Fill in the weather parameters:
+   - Date, Location
+   - Min/Max Temperature
+   - Rainfall, Evaporation, Sunshine
+   - Wind Gust Speed & Direction
+   - Wind Speed (9am / 3pm)
+   - Humidity (9am / 3pm)
+   - Pressure (9am / 3pm)
+   - Cloud Cover (9am / 3pm)
+   - Temperature (9am / 3pm)
+   - Rain Today
+4. Click **"Predict"**
+5. View your result: ☔ **RAINY DAY** or ☀️ **SUNNY DAY**
 
 ---
 
-## ⭐ Support
+## 📉 Data Preprocessing Steps
 
-If you like this project, give it a ⭐ on GitHub!
+```python
+# 1. Load Dataset
+df = pd.read_csv('rainfall_data.csv')
+
+# 2. Handle Missing Values
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(strategy='mean')
+
+# 3. Encode Categorical Variables
+from sklearn.preprocessing import LabelEncoder
+
+# 4. Split Dataset
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(
+    x, y, test_size=0.2, random_state=20
+)
+
+# 5. Train Random Forest
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier()
+model.fit(x_train, y_train)
+```
 
 ---
 
-## 👩‍💻 Author
+## 📊 Results
 
-**Devika Lahari**
+### Sample Predictions
+
+| Date | Location | Min Temp | Max Temp | Humidity | Result |
+|------|----------|----------|----------|----------|--------|
+| 01-12-2008 | Albury | 13.4 | 22.9 | 71 | ☀️ Sunny |
+| 11-01-2009 | BadgerysCreek | 12.6 | 30.2 | 61 | ☔ Rainy |
+| 02-01-2009 | Cobar | 18.4 | 28.9 | 30 | ☀️ Sunny |
+| 02-01-2009 | CoffsHarbour | 22.8 | 24.7 | 66 | ☔ Rainy |
+
+### Model Accuracy Summary
+
+```
+Random Forest  ████████████████████████████████ 83.86%
+KNN            ████████████████████████████     74.78%
+Gaussian NB    ████████████████████████████     74.48%
+```
+
+---
+
+## 🔮 Future Work
+
+- [ ] Extend model to predict **exact rainfall amount** (mm), not just binary classification
+- [ ] Apply **Ensemble Learning** techniques (Voting, Stacking) for improved accuracy
+- [ ] Train on **unlabeled data** using semi-supervised learning
+- [ ] Add **real-time weather API integration** (e.g., OpenWeatherMap)
+- [ ] Deploy on **Heroku / AWS / Render** for public access
+- [ ] Add **date-wise comparative analysis** of rainfall patterns
+- [ ] Extend dataset to include **more Indian states** beyond Andhra Pradesh
+
+---
+
+
+<p align="center">
+  ⭐ <b>If you found this project helpful, please give it a star!</b> ⭐
+  <br><br>
+  Made with ❤️ by <b>Bandi Devika Lahari</b>
+</p>
+
+
+
+-
+
+
 
 
 
