@@ -49,7 +49,7 @@ It demonstrates a complete ML pipeline — from **data preprocessing** to **mode
 
 • Created detailed research documentation for academic and reporting purposes
 
-
+---
 
 ## 📂 Project Structure
 
@@ -168,14 +168,6 @@ http://127.0.0.1:5000/
 * Feature selection improves model performance
 * Model comparison helps choose best algorithm
 * End-to-end ML workflow implementation
-
----
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to fork and improve this project.
 
 ---
 
