@@ -10,224 +10,9 @@
 
 
 ![Demo GIF](screenshots/demo.gif)
-*Interactive prediction dashboard showcasing model outputs.*
-
-</div>
-
-## 📋 Project Overview
-This project predicts rainfall amounts using historical weather data, focusing on Hyderabad, Telangana. It tackles class imbalance and feature engineering to deliver reliable forecasts for agriculture and disaster prep. Built with scikit-learn and XGBoost for production-ready performance.[web:9]
-
-Key highlights:
-- Handles multivariate time-series data (temp, humidity, wind, pressure).
-- Compares 5+ regressors: Random Forest excels with low RMSE.
-- Real-world dataset from Indian Meteorological Department.
-
-## 📊 Dataset
-- **Source**: [Kaggle India Rainfall Dataset](https://www.kaggle.com/datasets/abhilashayalwar/india-rainfall-dataset) (or IMD historical records)—~10 years of daily observations.[web:10]
-- **Features**: 15 columns including Location, MinTemp, MaxTemp, RainfallAmount, Evaporation, Sunshine, WindGustSpeed, Humidity, Pressure, Cloud, WindDir, RainToday.
-- **Size**: 50k+ samples, preprocessed for missing values (imputation) and outliers.
-- **Target**: Continuous rainfall (mm)—regression problem.
-
-## 🛠️ Tech Stack
-| Category     | Tools                          |
-|--------------|--------------------------------|
-| Language    | Python 3.8+                   |
-| ML Framework| Scikit-learn, XGBoost         |
-| Data        | Pandas, NumPy, Matplotlib     |
-| Viz         | Seaborn, Plotly               |
-| Environment | Jupyter Notebook, Conda       |
-
-## 💻 Environment Setup
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Devikalahari03/Rainfall-Prediction-using-Machine-Learning.git
-   cd Rainfall-Prediction-using-Machine-Learning
-   ```
-2. Create virtual env:
-   ```bash
-   conda create -n rainfall python=3.8
-   conda activate rainfall
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-
-## 🚀 Step-by-Step Usage
-1. **EDA**: Run `notebooks/eda.ipynb` for insights (correlation heatmap, distributions).[image:1]
-   
-   ![EDA Screenshot](screenshots/eda_correlation.png)
-   *Feature correlation matrix revealing key predictors.*
-
-2. **Train Models**: `python src/train_models.py`—saves `models/rainfall_regressor.pkl`.
-
-3. **Predict**: 
-   ```python
-   from src.predict import load_model, predict_rainfall
-   model = load_model('models/rainfall_regressor.pkl')
-   prediction = predict_rainfall(model, new_data)  # Returns mm rainfall
-   print(f"Predicted rainfall: {prediction:.2f} mm")
-   ```
-
-4. **Dashboard**: `streamlit run app.py` for interactive UI (add if extending).
-
-## 📈 Performance Metrics
-Trained on 80/20 split; cross-validated 5-fold.
-
-| Model              | RMSE ↓ | R² ↑   | MAE ↓  | Train Time (s) |
-|--------------------|--------|--------|--------|----------------|
-| Random Forest     | 0.12  | 0.87  | 0.08  | 45            |
-| XGBoost           | 0.13  | 0.85  | 0.09  | 32            |
-| Gradient Boosting | 0.15  | 0.83  | 0.10  | 28            |
-| SVM Regressor     | 0.18  | 0.79  | 0.12  | 120           |
-| Linear Regression | 0.22  | 0.72  | 0.15  | 5             |
-
-![Results Plot](screenshots/model_comparison.png)
-*Actual vs Predicted rainfall scatter plot—Random Forest hugs the line best.*[web:7]
-
-## 🔮 Future Work
-- Deploy to Heroku/AWS with API endpoint.
-- Add LSTM for time-series forecasting.
-- Incorporate satellite imagery (e.g., via TensorFlow).
-- Mobile app integration for farmers.
-
-## 📞 Connect
-Built by [Devika Lahari Bandi](https://www.linkedin.com/in/devika-lahari-bandi) • Hyderabad, India  
-[Portfolio](https://devikalahari03.github.io) | [Resume](resume.pdf) | 🌟 **Star this repo if helpful!**
-
----
-
-*Last updated: May 2026*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 🌧️ Rainfall Prediction using Machine Learning
-
 ### Predicting Rain Today, Planning Better Tomorrow ☁️📊
 
----
+</div>
 
 ## 🚀 Project Overview
 
@@ -243,19 +28,6 @@ It demonstrates a complete ML pipeline — from **data preprocessing** to **mode
 * 📈 Model comparison and evaluation
 * 🌐 Simple prediction system (using trained model)
 * 📉 Data visualization for better insights
-
----
-
-## 🧠 Machine Learning Models Used
-
-* Logistic Regression
-* Decision Tree
-* Random Forest
-* Support Vector Classifier (SVC)
-* K-Nearest Neighbors
-* Gaussian Naive Bayes
-* XGBoost
-* CatBoost
 
 ---
 
@@ -294,23 +66,37 @@ Rainfall-Prediction/
 
 ---
 
-## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository
+## 📊 Dataset
+- **Source**: https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
+- **Features**: 15 columns including Location, MinTemp, MaxTemp, RainfallAmount, Evaporation, Sunshine, WindGustSpeed, Humidity, Pressure, Cloud, WindDir, RainToday.
+- **Size**: 50k+ samples, preprocessed for missing values (imputation) and outliers.
+- **Target**: Continuous rainfall (mm)—regression problem.
 
-```bash
-git clone https://github.com/Devika Lahari/Rainfall-Prediction.git
-cd Rainfall-Prediction
-```
+## 🛠️ Tech Stack
+| Category     | Tools                          |
+|--------------|--------------------------------|
+| Language    | Python 3.8+                   |
+| ML Framework| Scikit-learn, XGBoost         |
+| Data        | Pandas, NumPy, Matplotlib     |
+| Viz         | Seaborn, Plotly               |
+| Environment | Jupyter Notebook, Conda       |
 
-### 2️⃣ Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
+## 💻 Environment Setup
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Devikalahari03/Rainfall-Prediction-using-Machine-Learning.git
+   cd Rainfall-Prediction-using-Machine-Learning
+   ```
+2. Create virtual env:
+   ```bash
+   conda create -n rainfall python=3.8
+   conda activate rainfall
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 ## ▶️ How to Run the Project
 
 ### 📌 Run Notebooks
@@ -339,18 +125,6 @@ http://127.0.0.1:5000/
 
 ---
 
-## 📊 Dataset
-
-👉 Download here:
-https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
-
-After downloading, place the file as:
-
-```
-weatherAUS.csv
-```
-
----
 
 ## 📈 Results
 
@@ -400,3 +174,130 @@ If you like this project, give it a ⭐ on GitHub!
 ## 👩‍💻 Author
 
 **Devika Lahari**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
