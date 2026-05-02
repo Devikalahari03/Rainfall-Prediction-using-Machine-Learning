@@ -7,7 +7,7 @@
 [![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-orange.svg)](https://pandas.pydata.org/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-1.7%2B-lightblue.svg)](https://xgboost.readthedocs.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/Devikalahari03/Rainfall-Prediction-using-Machine-Learning?style=social)](https://github.com/Devikalahari03/Rainfall-Prediction-using-Machine-Learning)
+
 
 **Accurate rainfall forecasting for Indian regions using advanced ML regressors.** Achieves **87% accuracy** on test data with Random Forest Regressor—empowering farmers and policymakers in Telangana.[web:1][web:10]
 
