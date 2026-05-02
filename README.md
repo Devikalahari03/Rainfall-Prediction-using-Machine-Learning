@@ -59,7 +59,7 @@ This project builds a **supervised machine learning model** trained on historica
 
 | Home Page | Prediction Form | Rainy Day Output | Sunny Day Output |
 |:---------:|:---------------:|:----------------:|:----------------:|
-| ![Home](# <img width="1898" height="857" alt="Screenshot 2025-06-19 231944" src="https://github.com/user-attachments/assets/3b0a2b17-ae33-44bc-b05c-a329d52f1b5e" />) | ![Form](# <img width="1310" height="586" alt="Screenshot 2025-06-19 134449" src="https://github.com/user-attachments/assets/886e789d-d48f-446a-8eaa-3329608abd5e" />) | ![Rainy](# <img width="1395" height="841" alt="Screenshot 2026-05-01 210040" src="https://github.com/user-attachments/assets/c2b74293-409e-4489-8a40-3228679277d1" />) | ![Sunny](# <img width="1426" height="850" alt="Screenshot 2026-05-01 205856" src="https://github.com/user-attachments/assets/c4eec612-fdcc-40ee-948e-218291666dfc" />) |
+| (<img width="1898" height="857" alt="Screenshot 2025-06-19 231944" src="https://github.com/user-attachments/assets/3b0a2b17-ae33-44bc-b05c-a329d52f1b5e" />) |  (<img width="1310" height="586" alt="Screenshot 2025-06-19 134449" src="https://github.com/user-attachments/assets/886e789d-d48f-446a-8eaa-3329608abd5e" />) | (<img width="1395" height="841" alt="Screenshot 2026-05-01 210040" src="https://github.com/user-attachments/assets/c2b74293-409e-4489-8a40-3228679277d1" />) | (<img width="1426" height="850" alt="Screenshot 2026-05-01 205856" src="https://github.com/user-attachments/assets/c4eec612-fdcc-40ee-948e-218291666dfc" />) |
 
 ---
 
