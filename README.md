@@ -8,7 +8,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 
-
 ![Demo GIF](screenshots/demo.gif)
 ### Predicting Rain Today, Planning Better Tomorrow ☁️📊
 
