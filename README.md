@@ -3,13 +3,11 @@
 # 🌧️ Rainfall Prediction using Machine Learning 🚀
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Scikit-learn](https://img.shields.io/badge/Scikit-learn-1.3%2B-yellowgreen.svg)](https://scikit-learn.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-2.0%2B-orange.svg)](https://pandas.pydata.org/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-1.7%2B-lightblue.svg)](https://xgboost.readthedocs.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 
-**Accurate rainfall forecasting for Indian regions using advanced ML regressors.** Achieves **87% accuracy** on test data with Random Forest Regressor—empowering farmers and policymakers in Telangana.[web:1][web:10]
 
 ![Demo GIF](screenshots/demo.gif)
 *Interactive prediction dashboard showcasing model outputs.*
