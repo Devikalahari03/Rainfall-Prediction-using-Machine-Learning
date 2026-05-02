@@ -40,15 +40,22 @@ It demonstrates a complete ML pipeline — from **data preprocessing** to **mode
 Rainfall-Prediction/
 │
 ├── Data Preprocessing.ipynb
+├── dt.pkl
+├── GaussianNB Model.ipynb
 ├── Feature Selection.ipynb
 ├── Logistic Regression Model.ipynb
+├── LogisticRegression.pkl
 ├── Decision Tree model.ipynb
 ├── Random Forest model.ipynb
 ├── SVC Model.ipynb
+├── svc.pkl
 ├── KNeighbors Classifier Model.ipynb
 ├── GaussianNB Model.ipynb
+├── gnb.pkl
 ├── Xgboost model.ipynb
+├── xg_random
 ├── Catboost model.ipynb
+├── cat.pkl
 │
 ├── app.py                     # Prediction system
 ├── requirements.txt          # Dependencies
@@ -109,8 +116,6 @@ http://127.0.0.1:5000/
 
 ## 📊 Dataset
 
-⚠️ Dataset is not included due to size limitations.
-
 👉 Download here:
 https://www.kaggle.com/datasets/jsphyg/weather-dataset-rattle-package
 
@@ -128,16 +133,13 @@ weatherAUS.csv
 * Identified best-performing model based on accuracy
 * Generated insights from weather features
 
-# <img width="1067" height="465" alt="image" src="https://github.com/user-attachments/assets/4b58bd8c-b610-4d95-8819-e52927405119" />
+# Output screens
 
-# <img width="1063" height="544" alt="image" src="https://github.com/user-attachments/assets/8390619a-79bc-480b-bece-f2eff647a4fe" />
-
-# <img width="1063" height="550" alt="image" src="https://github.com/user-attachments/assets/dd1ca8c8-fb6c-4434-8d91-7397f81dae59" />
-
-# <img width="1395" height="841" alt="Screenshot 2026-05-01 210040" src="https://github.com/user-attachments/assets/cdab9e1c-c39d-4daf-81de-dd8a7a66c401" />
-
-# <img width="1426" height="850" alt="Screenshot 2026-05-01 205856" src="https://github.com/user-attachments/assets/b6adb783-6789-46ff-84f3-1bde41346518" />
-
+# <img width="1898" height="857" alt="Screenshot 2025-06-19 231944" src="https://github.com/user-attachments/assets/3b0a2b17-ae33-44bc-b05c-a329d52f1b5e" />
+# <img width="1310" height="586" alt="Screenshot 2025-06-19 134449" src="https://github.com/user-attachments/assets/886e789d-d48f-446a-8eaa-3329608abd5e" />
+# <img width="1303" height="562" alt="Screenshot 2025-06-19 134948" src="https://github.com/user-attachments/assets/d46c6f7f-be0f-478e-b506-635102b76ca8" />
+# <img width="1395" height="841" alt="Screenshot 2026-05-01 210040" src="https://github.com/user-attachments/assets/c2b74293-409e-4489-8a40-3228679277d1" />
+# <img width="1426" height="850" alt="Screenshot 2026-05-01 205856" src="https://github.com/user-attachments/assets/c4eec612-fdcc-40ee-948e-218291666dfc" />
 
 ---
 
