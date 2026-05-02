@@ -30,6 +30,27 @@ It demonstrates a complete ML pipeline — from **data preprocessing** to **mode
 
 ---
 
+# 🔍 What I did:
+
+• Built and compared ML models including Random Forest, KNN, and Gaussian Naive Bayes
+
+• Achieved 83.8% accuracy, improving prediction reliability
+
+• Performed data cleaning, preprocessing, and exploratory data analysis on multi-year datasets
+
+• Applied feature engineering to enhance model performance
+
+
+# 💡 Going beyond modeling:
+
+• Designed system architecture using UML diagrams (Use Case, Class, Sequence, Activity) for structured development and knowledge sharing
+
+• Developed a Flask-based web interface to generate real-time rainfall predictions
+
+• Created detailed research documentation for academic and reporting purposes
+
+
+
 ## 📂 Project Structure
 
 ```bash
@@ -149,12 +170,6 @@ http://127.0.0.1:5000/
 * End-to-end ML workflow implementation
 
 ---
-
-## 🚀 Future Enhancements
-
-* 🌐 Deploy using Streamlit or Flask
-* ⏱️ Real-time weather API integration
-* 🤖 Deep learning models for improved accuracy
 
 ---
 
