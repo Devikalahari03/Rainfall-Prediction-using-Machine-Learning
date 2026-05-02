@@ -378,7 +378,21 @@ Gaussian NB    █████████████████████�
 - [ ] Extend dataset to include **more Indian states** beyond Andhra Pradesh
 
 ---
+👩‍💻 Author
+Devika Lahari
 
+🎓 M.Sc. Computer Science 
+🏛️ Adikavi Nannaya University, Rajamahendravaram (2023–2025)
+🔗 GitHub
+
+
+🙏 Acknowledgements
+
+University: Adikavi Nannaya University, Rajamahendravaram
+Dataset: Kaggle – Rain in Australia
+Libraries: Scikit-learn, Flask, Pandas, NumPy, Matplotlib, Seaborn
+
+---
 
 <p align="center">
   ⭐ <b>If you found this project helpful, please give it a star!</b> ⭐
